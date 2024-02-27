@@ -15,7 +15,6 @@ public class GridLayoutDemo extends JFrame {
 		JFrame frame = new JFrame("Jex Calculator");
 		JTextField textfield = new JTextField();
 		panel.setLayout(new GridLayout(5,4));
-		FlowLayout layout = new FlowLayout();
 		JButton[] numberButtons = new JButton[11];
 		JButton[] functionButtons = new JButton[9];
 		JButton addButton, subButton, mulButton, divButton;
@@ -75,8 +74,7 @@ public class GridLayoutDemo extends JFrame {
 			numberButtons[i].setFont(mainFont);
 			numberButtons[i].setFocusable(false);
 			numberButtons[i].setForeground(Color.BLUE);
-		}
-		
+		}		
 		
 		panel.setBounds(50, 100, 300, 300);
 		panel.setLayout(new GridLayout(5,4,10,10));
@@ -88,7 +86,6 @@ public class GridLayoutDemo extends JFrame {
 		panel.add(divButton);
 		
 		//2nd row
-		
 		panel.add(numberButtons[7]);
 		panel.add(numberButtons[8]);
 		panel.add(numberButtons[9]);
@@ -122,9 +119,7 @@ public class GridLayoutDemo extends JFrame {
 		divButton.setBackground(Color.ORANGE);
 		percentButton.setBackground(Color.ORANGE);
 		decButton.setBackground(Color.ORANGE);
-
-		
-		
+	
 		frame.add(panel);
 		frame.add(textfield);
 		frame.setVisible(true);
