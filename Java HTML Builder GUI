@@ -7,7 +7,9 @@ public class HTMLBuilder {
     public static void main(String[] args) {
         JFrame frame = new JFrame("HTML Builder");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Font font1 = new Font("Roboto", Font.PLAIN, 18);
+        Font font1 = new Font("Roboto", Font.ITALIC, 18);
+        Font font2 = new Font("Segoe UI", Font.BOLD, 12);
+        Font font3 = new Font("Segoe UI", Font.PLAIN, 13);
         frame.setResizable(false);
 
         // Create panels
@@ -20,6 +22,9 @@ public class HTMLBuilder {
         JTextField h1Field = new JTextField();
         JLabel paragraphLabel = new JLabel("Paragraph: ");
         JTextField paragraphField = new JTextField();
+        
+        h1Field.setFont(font2);
+        paragraphField.setFont(font3);
 
         westPanel.add(h1Label);
         westPanel.add(h1Field);
