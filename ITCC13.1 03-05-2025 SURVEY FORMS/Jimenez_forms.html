@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jex Music Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        form {
+            width: 320px;
+            margin: 0 auto;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .input-box {
+            position: relative;
+            margin: 15px 0;
+        }
+        .input-box input {
+            width: 85%;
+            padding: 10px 35px 10px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .input-box label {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+        .input-box input:focus + label,
+        .input-box input:valid + label {
+            top: 5px;
+            font-size: 12px;
+            color: #007BFF;
+        }
+
+        .icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: black;
+        }
+        fieldset {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        fieldset legend {
+            font-weight: bold;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 5px;
+        }
+        select, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            resize: none;
+        }
+
+        select{
+            width: 75%;
+        }
+
+        textarea{
+            width: 95%;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 8px 15px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn {
+            background-color: #007BFF;
+            color: white;
+        }
+        .reset-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Music Survey</h1>
+    <form>
+        <div class="input-box">
+            <span class="icon">&#128100;</span>
+            <input type="text" id="name" name="name" required>
+            <label for="name">Name</label> 
+        </div>
+
+        <div class="input-box">
+            <span class="icon">&#9993;</span>
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+        </div>
+
+        <fieldset> 
+            <legend>Select Your Favorite Types of Music:</legend>
+            <input type="checkbox" id="pop" name="pop">
+            <label for="pop">Pop</label> <br>
+
+            <input type="checkbox" id="classical" name="classical">
+            <label for="classical">Classical</label> <br>
+        
+            <input type="checkbox" id="rock" name="rock">
+            <label for="rock">Rock</label> <br>
+
+            <input type="checkbox" id="folk" name="folk">
+            <label for="folk">Folk</label> <br>
+
+            <input type="checkbox" id="rap" name="rap">
+            <label for="rap">Rap</label> <br>
+
+            <input type="checkbox" id="other" name="other">
+            <label for="other">Other</label> <br>
+        </fieldset>
+
+        <fieldset> 
+            <legend>Select how often you purchase Music:</legend>
+            <input type="radio" id="weekly" name="purchase">
+            <label for="weekly">Weekly</label> <br>
+
+            <input type="radio" id="fewYear" name="purchase">
+            <label for="fewYear">A few CDs each year</label> <br>
+
+            <input type="radio" id="monthly" name="purchase">
+            <label for="monthly">Monthly</label> <br>
+
+            <input type="radio" id="never" name="purchase">
+            <label for="never">Never purchase</label> <br>
+        </fieldset>
+
+        <label for="place">Select the location you listen to Music:</label>
+        <select name="place" id="place">
+            <option value="home" selected>At home</option>
+            <option value="car">In the car</option>
+            <option value="any">Anywhere</option>
+        </select>  <br> <br>
+
+        <label for="role">What role does music play in your life?</label>
+        <textarea name="role" id="role" rows="4"></textarea>
+
+        <div class="btn-container">
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="reset" class="reset-btn">Reset</button>
+        </div>
+    </form>
+
+    <footer>
+        <p> <i>Copyright &copy; 2025 Gerfel Jay Jimenez</i> </p>
+    </footer>
+
+</body>
+</html>
